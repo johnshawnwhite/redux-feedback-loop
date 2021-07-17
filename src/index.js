@@ -5,7 +5,7 @@ import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
 // import redux
-
+//import logger
 import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
@@ -20,6 +20,7 @@ const storeInstance = createStore(
         //support
         //comments
     }),
+    //apply logger here
     applyMiddleware(logger),
 );
 
