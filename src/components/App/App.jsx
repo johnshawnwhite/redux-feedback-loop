@@ -1,9 +1,11 @@
 import React from 'react';
 import axios from 'axios';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 
-function App() {
 
+function App() {
+//setup will contain the router, routes, and or link to each page
   return (
     <div className='App'>
       <header className='App-header'>
