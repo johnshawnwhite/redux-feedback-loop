@@ -3,3 +3,5 @@ const router = express.Router();
 const pool = require('../modules/pool');
 
 router.post();
+
+module.exports = router;
