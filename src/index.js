@@ -25,21 +25,21 @@ const feelingReducer = ( state =[], action) => {
 }
 const understandingReducer = ( state =[], action) => {
     if (action.type === "ADD_NEW_UNDERSTANDING") {
-        console.log(`The feeling added is ${action.payload}`);
+        console.log(`The understanding added is ${action.payload}`);
         return action.payload;
     }
     return state;
 }
 const supportReducer = ( state =[], action) => {
     if (action.type === "ADD_NEW_SUPPORT") {
-        console.log(`The feeling added is ${action.payload}`);
+        console.log(`The support added is ${action.payload}`);
         return action.payload;
     }
     return state;
 }
 const commentsReducer = ( state =[], action) => {
     if (action.type === "ADD_NEW_COMMENT") {
-        console.log(`The feeling added is ${action.payload}`);
+        console.log(`The comment added is ${action.payload}`);
         return action.payload;
     }
     return state;
