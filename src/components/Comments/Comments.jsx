@@ -10,14 +10,14 @@ function Comments() {
     
     const dispatch = useDispatch();
 
-    const[comment, setComment] = useState('');
+    const[comments, setComment] = useState('');
 
 
     const handleNextClick = event => {
         event.preventDefault();
         dispatch({
             type: 'ADD_NEW_COMMENT',
-            payload: comment,
+            payload: comments,
         });
         // alert("You are going to the understanding section");
         history.push('/review');
@@ -29,7 +29,7 @@ function Comments() {
           <h2>
               <input type="text" 
               onChange={(event) =>setComment
-              (event.target.value)} placeholder="1-5, 5 Being the Best"/>
+              (event.target.value)} placeholder="Share with me"/>
               <button onClick={handleNextClick}> Next</button>
           </h2>
       </div>

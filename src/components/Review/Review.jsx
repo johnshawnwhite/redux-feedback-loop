@@ -7,10 +7,25 @@ function Review() {
     const feelingReducer = useSelector(store => store.feelingReducer);
     const understandingReducer = useSelector(store => store.understandingReducer);
     const supportReducer = useSelector(store => store.supportReducer);
-    const commentReducer = useSelector(store => store.commentReducer);
+    const commentsReducer = useSelector(store => store.commentsReducer);
 
     const handleReview = () => {
-        
+        const feedback ={
+            feeling: feelingReducer,
+            understanding: understandingReducer,
+            support: supportReducer,
+            comments: commentsReducer
+        }
+        console.log(feedback);
+
+        axios.post('/feedback', feedback)
+        .then(response => {
+            console.log('Post', response);
+            history.push('/Thankyou');
+        })
+        .catch(error => {
+            console.log('error', error);
+        }) 
     }
     return (
         <section>
@@ -23,13 +38,17 @@ function Review() {
                     <th>Comments:</th>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{feelingReducer}</td>
+                    <td>{understandingReducer}</td>
+                    <td>{supportReducer}</td>
+                    <td>{commentsReducer}</td>
                 </tr>
             </table>
+            <button type="submit" onClick={handleReview}>
+                SUBMIT
+            </button>
         </section>
     )
-
 }
+
+export default Review;
