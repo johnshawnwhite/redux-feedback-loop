@@ -16,6 +16,7 @@ function Comments() {
 
   return (
       <div>
+          <h1>Would you like to make any comments?</h1>
           <h2>
               <button onClick={handleNextClick}>Next</button>
           </h2>

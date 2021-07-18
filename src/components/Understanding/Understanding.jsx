@@ -17,6 +17,7 @@ function Understanding() {
   return (
       <div>
           <h2>
+          <h1>How well are you understanding the material?</h1>
               <button onClick={handleNextClick}>Next</button>
           </h2>
       </div>

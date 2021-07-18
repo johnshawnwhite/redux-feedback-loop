@@ -16,6 +16,7 @@ function Support() {
 
   return (
       <div>
+          <h1>How well supported do you feel?</h1>
           <h2>
               <button onClick={handleNextClick}>Next</button>
           </h2>
