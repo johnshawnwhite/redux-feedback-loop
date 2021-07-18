@@ -1,6 +1,7 @@
 import axios from 'axios';
 import {useSelector} from 'react-redux';
 import {useHistory} from 'react-router-dom';
+import './Review.css';
 
 function Review() {
     const history = useHistory();
@@ -18,7 +19,7 @@ function Review() {
         }
         console.log(feedback);
 
-        axios.post('/feedback', feedback)
+        axios.post('/api/feedback', feedback)
         .then(response => {
             console.log('Post', response);
             history.push('/Thankyou');
@@ -30,7 +31,8 @@ function Review() {
     return (
         <section>
             <h2>Review Feedback</h2>
-            <table>
+            <table className="">
+                <tbody>
                 <tr>
                     <th>Feeling:</th>
                     <th>Understanding:</th>
@@ -43,6 +45,7 @@ function Review() {
                     <td>{supportReducer}</td>
                     <td>{commentsReducer}</td>
                 </tr>
+                </tbody>
             </table>
             <button type="submit" onClick={handleReview}>
                 SUBMIT

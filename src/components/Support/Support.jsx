@@ -27,10 +27,12 @@ function Support() {
     <div>
     <h1>How supported do you feel?</h1>
     <h2>
+      <form onSubmit={handleNextClick}>
         <input type="text" 
         onChange={(event) =>setSupport
-        (event.target.value)} placeholder="1-5, 5 Being the Best"/>
-        <button onClick={handleNextClick}> Next</button>
+        (event.target.value)} placeholder="1-5, 5 Being the Best" required/>
+        <button type="submit"> Next</button>
+        </form>
     </h2>
 </div>
   )

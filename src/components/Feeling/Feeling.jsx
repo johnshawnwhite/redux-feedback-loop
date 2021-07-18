@@ -28,10 +28,12 @@ function Feeling() {
       <div>
           <h1>How are you feeling about the content?</h1>
           <h2>
-              <input type="text" 
+              <form onSubmit={handleNextClick}>
+              <input type="text"
               onChange={(event) =>setFeeling
-              (event.target.value)} placeholder="1-5, 5 Being the Best"/>
-              <button onClick={handleNextClick}> Next</button>
+              (event.target.value)} placeholder="1-5, 5 Being the Best" required/>
+              <button type="submit"> Next</button>
+              </form>
           </h2>
       </div>
   )
