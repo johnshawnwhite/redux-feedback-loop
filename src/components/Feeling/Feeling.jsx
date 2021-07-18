@@ -5,12 +5,13 @@ import { useState, useEffect } from 'react';
 import {useHistory} from 'react-router-dom';
 
 function Feeling() {
+    const history = useHistory();
 
     const dispatch = useDispatch();
 
     const[feeling, setFeeling] = useState('');
 
-    const history = useHistory();
+    
 
     const handleNextClick = event => {
         event.preventDefault();
@@ -27,7 +28,10 @@ function Feeling() {
       <div>
           <h1>How are you feeling about the content?</h1>
           <h2>
-              <button onClick={handleNextClick}>Next</button>
+              <input type="text" 
+              onChange={(event) =>setFeeling
+              (event.target.value)} placeholder="1-5, 5 Being the Best"/>
+              <button onClick={handleNextClick}> Next</button>
           </h2>
       </div>
   )
