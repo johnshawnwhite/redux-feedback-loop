@@ -11,10 +11,15 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
 
+
+function feedbackReducer( state ={}, action) {
+    return state;
+}
 // storeInstance goes here
 //reducers also go in here
 const storeInstance = createStore(
     combineReducers({
+        feedbackReducer
         //feeling
         //understanding
         //support
