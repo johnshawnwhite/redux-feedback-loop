@@ -35,6 +35,9 @@ function App() {
         {/* <Route path="/review" exact>
             <Review />
         </Route> */}
+        {/* <Route path="/Thankyou" exact>
+            <Thankyou />
+        </Route> */}
         {/* <Route path="/admin" exact>
             <Admin />
         </Route> */}
