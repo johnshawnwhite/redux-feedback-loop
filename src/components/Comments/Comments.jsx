@@ -8,17 +8,29 @@ function Comments() {
 
     const history = useHistory();
     
-    function handleNextClick () {
-        alert("You are going to the understanding section");
-        history.push('/Review');
-    } ;
+    const dispatch = useDispatch();
 
+    const[comment, setComment] = useState('');
+
+
+    const handleNextClick = event => {
+        event.preventDefault();
+        dispatch({
+            type: 'ADD_NEW_COMMENT',
+            payload: comment,
+        });
+        // alert("You are going to the understanding section");
+        history.push('/review');
+    } ;
 
   return (
       <div>
           <h1>Would you like to make any comments?</h1>
           <h2>
-              <button onClick={handleNextClick}>Next</button>
+              <input type="text" 
+              onChange={(event) =>setComment
+              (event.target.value)} placeholder="1-5, 5 Being the Best"/>
+              <button onClick={handleNextClick}> Next</button>
           </h2>
       </div>
   )

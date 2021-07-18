@@ -7,20 +7,32 @@ import {useHistory} from 'react-router-dom';
 function Support() {
 
     const history = useHistory();
-    
-    function handleNextClick () {
-        alert("You are going to the understanding section");
-        history.push('/Comments');
+
+    const dispatch = useDispatch();
+
+    const[support, setSupport] = useState('');
+
+
+    const handleNextClick = event => {
+        event.preventDefault();
+        dispatch({
+            type: 'ADD_NEW_SUPPORT',
+            payload: support,
+        });
+        // alert("You are going to the understanding section");
+        history.push('/comments');
     } ;
 
-
   return (
-      <div>
-          <h1>How well supported do you feel?</h1>
-          <h2>
-              <button onClick={handleNextClick}>Next</button>
-          </h2>
-      </div>
+    <div>
+    <h1>How supported do you feel?</h1>
+    <h2>
+        <input type="text" 
+        onChange={(event) =>setSupport
+        (event.target.value)} placeholder="1-5, 5 Being the Best"/>
+        <button onClick={handleNextClick}> Next</button>
+    </h2>
+</div>
   )
 }
 
