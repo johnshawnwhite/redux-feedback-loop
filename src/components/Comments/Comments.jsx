@@ -22,6 +22,9 @@ function Comments() {
         // alert("You are going to the understanding section");
         history.push('/review');
     } ;
+    const goBackClick = event => {
+        history.push('/support');
+    }
 
   return (
       <div>
@@ -31,6 +34,7 @@ function Comments() {
               onChange={(event) =>setComment
               (event.target.value)} placeholder="Share with me"/>
               <button onClick={handleNextClick}> Next</button>
+              <button onClick={goBackClick}>Last Page</button>
           </h2>
       </div>
   )

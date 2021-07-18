@@ -22,8 +22,7 @@ function Feeling() {
         // alert("You are going to the understanding section");
         history.push('/understanding');
     } ;
-
-
+    
   return (
       <div>
           <h1>How are you feeling about the content?</h1>

@@ -24,6 +24,10 @@ function Understanding() {
         history.push('/support');
     } ;
 
+    const goBackClick = event => {
+        history.push('/');
+    }
+
 
   return (
       <div>
@@ -34,6 +38,7 @@ function Understanding() {
               onChange={(event) =>setUnderstanding
               (event.target.value)} placeholder="1-5, 5 Being the Best" required/>
               <button type="submit"> Next</button>
+              <button onClick={goBackClick}>Last Page</button>
               </form>
           </h2>
       </div>
