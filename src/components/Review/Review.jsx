@@ -29,9 +29,10 @@ function Review() {
         }) 
     }
     return (
-        <section>
+        <section className="table">
             <h2>Review Feedback</h2>
-            <table className="">
+            <center>
+            <table>
                 <tbody>
                 <tr>
                     <th>Feeling:</th>
@@ -47,10 +48,12 @@ function Review() {
                 </tr>
                 </tbody>
             </table>
+            </center>
             <button type="submit" onClick={handleReview}>
                 SUBMIT
             </button>
         </section>
+        
     )
 }
 
