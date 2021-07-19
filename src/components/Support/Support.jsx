@@ -36,7 +36,7 @@ function Support() {
         <input type="text" 
         onChange={(event) =>setSupport
         (event.target.value)} placeholder="1-5, 5 Being the Best" required/>
-        {/* /* the form on submit event ties the element together from top to bottom, and the required statement makes it so you have to enter a value to move forward */} */}
+        {/* /* the form on submit event ties the element together from top to bottom, and the required statement makes it so you have to enter a value to move forward */}
         <button type="submit"> Next</button>
         <button onClick={goBackClick}>Last Page</button>
         </form>
