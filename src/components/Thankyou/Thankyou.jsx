@@ -12,6 +12,7 @@ function Thankyou() {
     const startAgain = () => {
         history.push('/');
     }
+    // really all this page does is send you back to the beginning for another chance to send feedback
     
     return (
         <section>

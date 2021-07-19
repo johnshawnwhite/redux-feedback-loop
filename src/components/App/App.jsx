@@ -21,6 +21,8 @@ function App() {
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
       </header>
+{/*  app will load the first page and then move to the next page through button clicks
+ will also add in a back button so that you can change your mind before you get done */}
       <Route path="/" exact>
             <Feeling />
         </Route>

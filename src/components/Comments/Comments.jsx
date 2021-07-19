@@ -5,7 +5,9 @@ import { useState, useEffect } from 'react';
 import {useHistory} from 'react-router-dom';
 
 function Comments() {
-
+// adding the const of history allows you to locate pages and go to them through the click event
+// also adding the use state allows the dispatch to send the information to the reducer and hold on to it 
+// for when it is called back
     const history = useHistory();
     
     const dispatch = useDispatch();
@@ -25,7 +27,8 @@ function Comments() {
     const goBackClick = event => {
         history.push('/support');
     }
-
+// the buttons allow for navigation forward and backward, this is the only of the 4 main pages that allows
+// you to move forward without entering a value into the input field
   return (
       <div>
           <h1>Would you like to make any comments?</h1>
